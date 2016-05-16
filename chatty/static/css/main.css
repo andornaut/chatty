@@ -1,0 +1,371 @@
+/*******************************************************************************
+ * Utility
+ ******************************************************************************/
+
+blockquote,body,caption,div,dl,dt,dd,form,fieldset,h1,h2,h3,h4,h5,h6,html,li,ul,ol,p,pre,textarea,table,td,th {
+	margin:0;
+	padding:0;
+}
+/* ref: http://www.positioniseverything.net/easyclearing.html */
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.clearfix {display: inline-block;}  /* for IE/Mac */
+
+html[xmlns] .clearfix {
+	display: block;
+}
+
+/*******************************************************************************
+ * Tags
+ ******************************************************************************/
+
+a:link, a:visited, a:active, a:hover {
+	color: #004488;
+}
+a img {
+	border: 0 none;
+}
+body {
+	font-family: "lucida grande",tahoma,verdana,arial,sans-serif;
+	font-size: 16px;
+}
+body.default {
+	background: white url("/img/bg.gif") repeat-y center 0;
+}
+form input {
+	margin: 2px 0;
+}
+form input#changed_nickname {
+	width: 174px;
+}
+form input#title {
+	width: 200px;
+}
+form input[type=password],
+form input[type=text] {
+	width: 150px;
+}
+form li {
+	list-style: none;
+	margin-top: 5px;
+}
+form li label {
+	display: block;
+	font-size: 80%;
+	font-weight: bold;
+}
+form li label em {
+	color: #666;
+	font-weight: normal;
+}
+form td, 
+form th {
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+form td {
+	color: #bbb;
+	text-align: left;
+}
+form td input {
+	color: black;
+}
+form th {
+	font-weight: normal;
+	padding-right: 10px;
+	text-align: right;
+}
+h1,
+h2,
+h3,
+h4,
+p {
+	margin-bottom: 10px;
+}
+h1 {
+	font-size: 135%;
+}
+h2 {
+	font-size: 125%;
+}
+h3 {
+	font-size: 115%;
+}
+hr {
+	border: 0 none;
+	border-top:1px solid #ddd;
+	margin: 10px 0 0 0;
+	padding: 5px;
+}
+ul.errors {
+	color: red;
+	font-size: 80%;
+	list-style-type: none;
+	text-align: left;
+}
+
+/*******************************************************************************
+ * IDs
+ ******************************************************************************/
+
+#chats {
+	margin: 20px 210px 0 20px;
+}
+#chats li {
+	border-bottom: 1px solid #ddd;
+	list-style: none;
+	margin-bottom: 10px;
+	padding-bottom: 10px;
+}
+#chats li div {
+	padding-bottom: 1px;
+}
+#chats li .details {
+	color: #666;
+	font-size: 80%;
+}
+#chats li .head {
+	font-size: 125%;
+}
+#chats li .sub-head {
+	font-size: 90%;
+}
+#cover {
+	background: #666;
+	height: 100%;
+	left: 0;
+	opacity: 0.5;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 1000;
+}
+#documentation {
+	float: left;
+	margin-top: 20px;
+}
+#documentation dt {
+	color: #888;
+	font-weight: bold;
+}
+#documentation dd {
+	margin: 0 0 10px 20px;
+}
+#flash {
+	background: #ffc;
+	border: 1px dotted #93CC97;
+	padding: 5px;
+	margin: 5px 2px;
+}
+#flash p {
+	margin: 0px;
+	text-align: center;
+}
+#footer {
+	color: #bbb;
+	font-size: 60%;
+	padding: 20px 0 0px;
+	text-align: center;
+}
+#friends li {
+	color: #666;
+}
+body.main #logo {
+	display: block;
+	margin: 0 auto;
+} 
+body.default #logo {
+	display: inline-block;
+}
+#logo {
+	background: url("/img/logo.png") no-repeat center 5px;
+	height: 48px;
+	width: 96px;
+}
+#logo span {
+	display: none;
+}
+#pop-out {
+	display: inline-block;
+	float: right;
+	margin-right: 1%;
+}
+body.main #sidebar {
+	margin-top: 10px;
+	position: absolute; 
+	right:10px;
+	top: 48px; 
+}
+#sidebar {
+	float: right;
+	width: 180px;
+}
+#sidebar-lower {
+	margin-top: 10px;
+	position: absolute;
+	right: 10px;
+	width: 180px;
+}
+#sidebar a,
+#sidebar-lower a {
+	text-decoration: none;
+}
+#sidebar h3,
+#sidebar-lower h3 {
+	font-size: 100%;
+	font-weight: normal;
+}
+#sidebar li,
+#sidebar-lower li {
+	list-style: none;
+}
+#sidebar #friends li,
+#sidebar-lower #friends li {
+	margin: 4px 0 4px 4px;
+}
+#top {
+	background-color: #93CC97;
+	height: 48px;
+}
+#top .container {
+	margin: 0 auto;
+	width: 820px;
+}
+body.main #top .container div {
+	position: absolute;
+	right: 0;
+	top: 0;
+} 
+body.default #top .container div {
+	float: right;
+}
+#top .container div {
+	background-color: #88BC8C;
+	height: 33px;
+	list-style: none;
+	padding-top: 15px;
+	text-align: center;
+	width: 200px;
+}
+#top li {
+	display: inline-block;
+}
+#top li a {
+	color: white;
+	font-size: 14px;
+	font-weight: bold;
+	margin: 0 2px;
+	text-decoration: none;
+}
+#window-overlay {
+	background-color: white;
+	border: 5px solid #666;
+	left: 10%;
+	margin: 0 auto;
+	padding: 1%;
+	position: fixed;
+	top: 40px;
+	width: 78%;
+	z-index: 1001;
+}
+#window-overlay .close {
+	font-family: Consolas,"Lucida Console",monospace,Verdana,sans-serif,"sans serif";
+	font-weight: bold;
+	position: absolute;
+	right: 8px;
+	text-decoration: none;
+	top: 5px;
+}
+#wrap-outer {
+	background: #f5f7f2;
+	border-bottom: 1px solid #ddd;
+	overflow-x: hidden;
+}
+#wrap-outer #wrap-middle {
+	float: left;
+	position: relative;
+	left: 50%;
+}
+#wrap-outer #wrap-middle #wrap-inner {
+	border-right: 1px solid #ddd;
+	float: left;
+	position: relative;
+	left: -50%;
+	margin-right: 199px; 
+}
+#wrap-outer #wrap-middle #wrap-inner .container {
+	padding: 10px 0;
+}
+#wrap-chat {
+	margin: 8px auto 0 auto;
+	width: 800px;
+}
+
+/*******************************************************************************
+ * Classes
+ ******************************************************************************/
+
+.divide-form,
+.divide-form-left,
+.divide-form-right {
+	float: left;
+	padding: 10px 2%;
+	width: 45%;
+}
+.divide-form-left {
+	border-right: 1px solid #ddd;
+}
+.divide-form-right {
+	border-left: 1px solid #ddd;
+}
+
+/*******************************************************************************
+ * Media
+ ******************************************************************************/
+
+@media all and (max-width: 640px),
+all and (max-height: 540px),
+all and (max-device-width: 640px),
+all and (max-device-height: 540px) {
+	div.ui-resizable-handle {
+		display: none;
+	}
+	#documentation,
+	#footer,
+	#pop-out {
+		display: none;
+	}
+	#top .container {
+		width: 100%;
+	}
+	#top ul {
+		background: inherit;
+	}
+	#wrap-inner,
+	#wrap-inner .container {
+		left: inherit;
+		float: none;
+	}
+	#wrap-inner {
+		width: 100%;
+	}
+	#wrap-chat {
+		margin: 0;
+		padding: 0;
+		width: 100%;
+	}
+}
+@media all and (max-device-width: 640px),
+all and (max-device-height: 540px) {
+	body {		
+		font-size: 280%;
+	}
+	input {
+		font-size: 70%;
+	}
+}

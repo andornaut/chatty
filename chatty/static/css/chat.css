@@ -1,0 +1,150 @@
+/*******************************************************************************
+ * Tags
+ ******************************************************************************/
+ 
+/*******************************************************************************
+ * IDs
+ ******************************************************************************/
+
+#chat {
+	bottom: 8px;
+	position: absolute;
+	top: 56px;
+	width: 610px;
+}
+#chat form {
+	background-color: #DBDEDC;
+	bottom: 0;
+	height: 70px;
+	padding-top: 4px;
+	position: absolute;
+	width: 100%;
+}
+#chat form input {
+	background-color: #f9f9f9;
+	border: 1px solid #888;
+	font-size: 110%;
+	margin-left: 1%;
+	margin-top: 1px
+}
+#chat form textarea {
+	border: 1px solid #888;
+	display: block;
+	height: 32px;
+	margin-left: 1%;
+	padding: 2px;
+	width: 97%;
+}	
+#chat p.note {
+	background-color: #fafafa;
+	border-bottom: 1px solid #DBDEDC;
+	border-left: 1px solid #DBDEDC;
+	border-right: 1px solid #DBDEDC;
+	bottom: 0;
+	color: #88BC8C;
+	font-weight: bold;
+	height: 66px;
+	margin: 0;
+	overflow: auto;
+	padding: 4px 10px 3px 10px;
+	position: absolute;
+}
+#chat ul {
+	background-color: white;
+	border: 1px solid #DBDEDC;
+	bottom: 74px;
+	font-family: Consolas,"Lucida Console",monospace,Verdana,sans-serif,"sans serif";
+	font-size: 85%;
+	/*height: 400px;*/
+	list-style-type: none;
+	margin-top: 0 4px 4px 4px;
+	overflow: auto;
+	padding: 4px;
+	position: absolute;
+	top: 0;
+	width: 600px;
+}
+#chat ul li {
+	border-bottom: 1px dotted #DBDEDC;
+	margin-top: 6px;	
+	overflow: auto;
+	padding-bottom: 6px;
+}
+#chat ul li.chat-encrypted-message,
+#chat ul li.chat-encrypted-message a {
+	color: #347235;
+}
+#chat ul li.chat-private-message,
+#chat ul li.chat-private-message a {
+	color: #800080;
+}
+#chat ul li.chat-error {
+	color: red;
+}
+#chat ul li.chat-error,
+#chat ul li.chat-system-message {
+	text-align: center;
+}
+#chat ul li th {
+	font-weight: normal;
+	padding-right: 4px;
+	vertical-align: top;
+}
+#chat li th span {
+	font-weight: bold;
+}
+#chat li th a {
+	text-decoration: none;
+}
+
+/*******************************************************************************
+ * Classes
+ ******************************************************************************/
+
+/*******************************************************************************
+ * Media
+ ******************************************************************************/
+
+@media all and (max-width: 640px),
+all and (max-height: 540px),
+all and (max-device-width: 640px),
+all and (max-device-height: 540px) {
+	#chat {
+		bottom: 0px;
+		margin-top: 0;
+		position: absolute;
+		top: 48px;
+		width: 100%;
+	}
+	#chat form {
+		bottom: 0;
+		position: absolute;
+		width: 100%;
+	}
+	#chat ul {
+		border: 0 none;
+		bottom: 74px;
+		position: absolute;
+		height: inherit;
+		margin-top: 0;
+		padding: 1%;
+		top: 0px;
+		width: 98%;
+	}
+}
+@media all and (max-device-width: 640px),
+all and (max-device-height: 540px) {
+	#chat form {
+		height: inherit;
+	}
+	#chat form input {
+		display: none;
+	}
+	#chat form textarea {
+		height: 1.2em;
+		font-size: 1em;
+	}
+	#chat li {
+		padding: 0;
+	}
+}
