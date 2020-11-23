@@ -33,7 +33,7 @@ stomper==0.2.4
 transaction==1.2.0
 translationstring==1.1
 venusian==1.0a2
-waitress==0.8
+waitress==1.4.3
 wsgiref==0.1.2
 yolk==0.4.3
 zope.deprecation==3.5.0
